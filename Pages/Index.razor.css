@@ -1,4 +1,4 @@
-.main-style{
+.main-style {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,6 +6,7 @@
     align-items: center;
     background-color: #fbf9e0;
 }
+
 img {
     height: 90%;
     width: 90%;
@@ -17,13 +18,17 @@ img {
     font-family: "Gowun Dodum";
     font-size: 24px;
     font-weight: 400;
-    height: 25%;
-    width: 25%;
+    vertical-align: 100px;
+    width: 30%;
 }
 
 @media screen and (max-width: 600px) {
     .innerText {
-        offset-position: 100px 0px;
+        font-size: 12px;
+    }
+
+    .lowerText {
+        font-size: 12px;
     }
 }
 

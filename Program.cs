@@ -14,7 +14,6 @@ List<Prediction> _predictions = new();
 var lines = DataLines.AllLines.Split("\r\n").Where(x => x != "");
 foreach(var line in lines){
     var values = line.Split('.');
-    Console.WriteLine($"{values[0]} and {values[1]}");
     var id = int.Parse(values[0]);
     var value = values[1];
     _predictions.Add(new(id,value));
