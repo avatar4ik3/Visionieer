@@ -39,6 +39,8 @@ img {
 .lowerText {
     color: black;
     font-family: "Gowun Dodum";
+    position: fixed;
+    bottom: 0%;
     font-size: 24px;
     font-weight: 400;
 }
