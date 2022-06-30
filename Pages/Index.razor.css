@@ -1,0 +1,41 @@
+.main-style {
+    align-items: flex-start;
+    background-color: #fbf9e0;
+    display: flex;
+    position: relative;
+}
+
+.overlap {
+    height: 421px;
+    position: relative;
+    width: 340px;
+}
+
+.img-v {
+    object-fit: cover;
+    position: relative;
+    align-items: center;
+}
+
+.text1 {
+    color: #dbb52b;
+    font-family: "Gowun Dodum";
+    font-size: 24px;
+    font-weight: 400;
+    left: 87px;
+    letter-spacing: 0;
+    position: absolute;
+    text-align: center;
+    top: 188px;
+    width: 167px;
+}
+
+.text2 {
+    color: black;
+    font-family: "Gowun Dodum";
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    position: absolute;
+    text-align: center;
+}
