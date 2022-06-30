@@ -14,12 +14,13 @@ img {
 
 .innerText {
     position: absolute;
-    color: #dbb52b;
+    color: #edbc0e;
     font-family: "Gowun Dodum";
     font-size: 24px;
     font-weight: 400;
-    vertical-align: 100px;
+    line-height : 130%;
     width: 30%;
+    height: 30%;
 }
 
 @media screen and (max-width: 600px) {
