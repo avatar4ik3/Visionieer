@@ -17,11 +17,13 @@ img {
     font-family: "Gowun Dodum";
     font-size: 24px;
     font-weight: 400;
+    height: 25%;
+    width: 25%;
 }
 
 @media screen and (max-width: 600px) {
     .innerText {
-        color: green;
+        offset-position: 100px 0px;
     }
 }
 
