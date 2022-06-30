@@ -1,41 +1,33 @@
-.main-style {
-    align-items: flex-start;
-    background-color: #fbf9e0;
+.main-style{
+    position: relative;
     display: flex;
-    position: relative;
-}
-
-.overlap {
-    height: 421px;
-    position: relative;
-    width: 340px;
-}
-
-.img-v {
-    object-fit: cover;
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #fbf9e0;
+}
+img {
+    height: 90%;
+    width: 90%;
 }
 
-.text1 {
+.innerText {
+    position: absolute;
     color: #dbb52b;
     font-family: "Gowun Dodum";
     font-size: 24px;
     font-weight: 400;
-    left: 87px;
-    letter-spacing: 0;
-    position: absolute;
-    text-align: center;
-    top: 188px;
-    width: 167px;
 }
 
-.text2 {
+@media screen and (max-width: 600px) {
+    .innerText {
+        color: green;
+    }
+}
+
+.lowerText {
     color: black;
     font-family: "Gowun Dodum";
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: 0;
-    position: absolute;
-    text-align: center;
 }

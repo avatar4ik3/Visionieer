@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.EntityFrameworkCore.InMemory;
 using Visionieer;
 using Blazored.LocalStorage;
 using Visionieer.Models;

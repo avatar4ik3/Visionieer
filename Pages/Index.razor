@@ -1,22 +1,18 @@
 ﻿@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject List<Prediction> Predictions
 @page "/"
-
-<div class="main-style screen">
-    <div class = "overlap-ground">
-        <img class = "img-v" src="IMG1.png"/>
-        <p class="text1">@Predictions[id].Value</p>
-        <div class = "text2">KOLDOVSVOREZ</div>
-    </div>
+<div class="main-style">
+    <img class="img-v" src="IMG1.png" />
+    <p class="innerText">@Predictions[id].Value.</p>
+    <p class="lowerText">KOLDOVSVOREZ</p>
 </div>
-
 @code {
     private int id = 0;
     protected override async Task OnInitializedAsync()
     {
         if (await LocalStorage.ContainKeyAsync("id") is false)
         {
-            await LocalStorage.SetItemAsync("id", new Random().Next(0,Predictions.Count));
+            await LocalStorage.SetItemAsync("id", new Random().Next(0, Predictions.Count));
         }
         id = await LocalStorage.GetItemAsync<int>("id");
     }
