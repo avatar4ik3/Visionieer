@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Visionieer;
 using Blazored.LocalStorage;
 using Visionieer.Models;
+using System;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -11,12 +12,21 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 List<Prediction> _predictions = new();
 
-var lines = DataLines.AllLines.Split("\r\n").Where(x => x != "");
-foreach(var line in lines){
+var splitchars = String.Empty;
+if (OperatingSystem.IsBrowser() is true)
+{
+    splitchars = "\r\n";
+}
+else {
+    splitchars = "\n";
+}
+var lines = DataLines.AllLines.Split(splitchars).Where(x => x != "");
+foreach (var line in lines)
+{
     var values = line.Split('.');
     var id = int.Parse(values[0]);
     var value = values[1];
-    _predictions.Add(new(id,value));
+    _predictions.Add(new(id, value));
 }
 
 builder.Services.AddSingleton<List<Prediction>>(_predictions);
@@ -26,9 +36,10 @@ await app.RunAsync();
 
 
 
-public class DataLines{
-public static string AllLines = 
-@"
+public class DataLines
+{
+    public static string AllLines =
+    @"
 1.Лучше зажечь маленькую свечку, чем всю жизнь проклинать темноту
 2.Удача придёт откуда не ждёте 
 3.Все неоконченные дела будут завершены 
