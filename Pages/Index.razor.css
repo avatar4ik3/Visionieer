@@ -14,6 +14,7 @@ img {
 
 .innerText {
     position: absolute;
+    text-align: center;
     top : 47%;
     color: #edbc0e;
     font-family: "Gowun Dodum";
@@ -27,6 +28,7 @@ img {
 @media screen and (max-width: 600px) {
     .innerText {
         font-size: 12px;
+        top : 39%
     }
 
     .lowerText {
